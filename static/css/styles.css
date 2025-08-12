@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+
+    .bg-brand-green { 
+        background-color: #2A663A;
+    }
+
+    .text-brand-green {
+        color: #2A663A; 
+    }
+
+    .bg-action-green { 
+        background-color: #77C980; 
+    }
+    
+    .bg-action-green:hover { 
+        background-color: #6ab471; 
+    }
+   
+    .text-brand-dark-gray { 
+        color: #2D2D2D; 
+    }
+    
+    .text-brand-medium-gray { 
+        color: #5E5E5E; 
+    }
+
+    .border-brand-green {
+        border-color: #2A663A; 
+    }
+    
+    .focus\:border-brand-green:focus {
+        border-color: #2A663A;
+    }
+}
