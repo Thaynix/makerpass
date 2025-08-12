@@ -18,7 +18,7 @@ from .models import *
 from autenticacao.models import Servidor, User 
 
 class PaginaRegistroPontoView(View):
-    template_name = 'makerpass/registrar_ponto.html'
+    template_name = 'registrar_ponto.html'
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
@@ -86,7 +86,7 @@ class PaginaRegistroPontoView(View):
         return redirect('pagina_sucesso_ponto')
 
 class PaginaSucessoPontoView(TemplateView):
-    template_name = 'makerpass/sucesso_ponto.html'
+    template_name = 'sucesso_ponto.html'
     
     def get_context_data(self, **kwargs):
         ultimo_ponto = Ponto.objects.all().last()
