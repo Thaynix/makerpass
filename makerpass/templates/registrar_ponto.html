@@ -21,21 +21,44 @@
                 <div class="my-8">
                     <div id="clock" class="clock-text">00:00</div>
                 </div>
-                <input type="text" class="input-matricula form-control" id="matricula" name="matricula" placeholder="Insira sua matricula">
-                
-                <div class="form-check-se d-flex justify-content-center">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Entrada</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Saída</label>
-                    </div>
-                </div>
-                
-                <button type="button" class="btn btn-success">Success</button>
 
+
+                <form method="post" action="#" class="w-full">
+                    {% csrf_token %}
+                    
+                    <div class="mb-4">
+                        <input type="text" class="input-matricula matricula form-control" id="matricula" name="matricula" placeholder="Insira sua matricula">
+                    </div>
+                    
+                    <!-- Mensagens de Feedback (para Django) 
+                    <div class="min-h-[52px] flex items-center justify-center">
+                        {% if messages %}
+                            <div class="w-full mt-[-15px]" id="messages-wrapper">
+                                {% for message in messages %}
+                                    <div class="text-center p-3 rounded-lg 
+                                                {% if message.tags == 'success' %} bg-green-100 text-green-800 {% endif %}
+                                                {% if message.tags == 'error' %} bg-red-100 text-red-800 {% endif %}" 
+                                         role="alert">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>-->
+                    
+                    <div class="form-check-se d-flex justify-content-center align-items-center">
+                        <div class="form-check config-inputs-radio">
+                            <input class="form-check-input input-radio" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label text-radio" for="inlineRadio1">Entrada</label>
+                        </div>
+                        <div class="form-check config-inputs-radio">
+                            <input class="form-check-input input-radio" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label text-radio" for="inlineRadio2">Saída</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-confirm-matricula">Confirmar</button>
+
+                </form>
             </div>
         </div>
     </div>
