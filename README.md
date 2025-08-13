@@ -1,3 +1,9 @@
+## O que é o MakerPass
+é um projeto para controlar o acesso dos bolsistas ao laboratorio maker, assim ter o controle de horas trabalhadas. Também para ajudar com o controle e agendamento das visitas externas ao laboratorio.
+
+## Página de registro de ponto
+
+
 ## Instalação
 
 ### Configurando o ambiente
